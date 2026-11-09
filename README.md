@@ -25,9 +25,6 @@ The three boosters are statistically indistinguishable.
 | LightGBM | 21 | 1,250 |
 | CatBoost | 21 | 1,151 |
 
-<One sentence: metric, Ridge vs CatBoost values, bootstrap share, and
-whether the difference is significant.>
-
 On FD003, Ridge achieved a NASA score of 1,154 versus CatBoost at 1,151; the bootstrap share indicates only a marginal advantage for CatBoost, and the difference is not statistically significant.
 
 ## Method
