@@ -13,9 +13,11 @@ def load_model(folder):
 @st.cache_data
 def load_data(folder):
     return pd.read_csv(BASE / folder / "demo_test.csv"), pd.read_csv(BASE / folder / "demo_rul.csv")
+
 @st.cache_data
 def load_results(folder):
     return pd.read_csv(BASE / folder / "results.csv")
+
 @st.cache_data
 def final_cycle_predictions(folder, model_name=None):
     bundle = load_model(folder)
@@ -28,7 +30,7 @@ def final_cycle_predictions(folder, model_name=None):
 
 required = ["model.joblib", "demo_test.csv", "demo_rul.csv"]
 available = [d for d in ["FD001", "FD003"]
-             if all((BASE / d / f).exists() for f in required)]
+             if all((BASE / d / f).exists() for f in required)] # specify the dataset folders you want to include
 
 if not available:
     st.error("No dataset folders found."); st.stop()
@@ -39,8 +41,8 @@ model_options = [key for key in bundle.keys() if key != "feature"]
 selected_model = st.sidebar.selectbox("Model", model_options)
 model, feats = bundle[selected_model], bundle["feature"]
 test, rul = load_data(folder=selected_folder)
-results = load_results(folder=selected_folder
-                                       )
+results = load_results(folder=selected_folder)
+
 st.title("Turbofan engine: remaining useful life")
 rmse = bundle.get("test_rmse")
 st.caption(f"NASA C-MAPSS {selected_folder} · {selected_model} model"
