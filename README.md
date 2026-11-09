@@ -15,7 +15,7 @@ Predicts the remaining useful life (RUL) of turbofan engines from sensor reading
 | CatBoost | 18.5 | 688 |
 
 Paired bootstrap: Ridge was worse than every booster in 100% of resamples.
-The three boosters are statistically indistinguishable (46-66%).
+The three boosters are statistically indistinguishable.
 
 ### FD003
 | Model | RMSE | NASA score |
@@ -27,6 +27,8 @@ The three boosters are statistically indistinguishable (46-66%).
 
 <One sentence: metric, Ridge vs CatBoost values, bootstrap share, and
 whether the difference is significant.>
+
+On FD003, Ridge achieved a NASA score of 1,154 versus CatBoost at 1,151; the bootstrap share indicates only a marginal advantage for CatBoost, and the difference is not statistically significant.
 
 ## Method
 - Training target capped (110 cycles FD001, 115 FD003); scored against uncapped true RUL.
