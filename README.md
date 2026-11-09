@@ -57,3 +57,14 @@ Python 3.12. `pip install -r requirements-notebook.txt`, then run
 ## Data
 NASA Turbofan Engine Degradation Simulation Data Set (C-MAPSS), NASA Prognostics
 Data Repository: [CMAPSS Jet Engine Simulated Data](https://www.kaggle.com/datasets/palbha/cmapss-jet-engine-simulated-data?select=readme.txt)
+
+## Similar Work
+[Machine-Learning-Concepts
+](https://github.com/Sumaidzahid/Machine-Learning-Concepts)
+
+An end-to-end machine learning regression project developed in a Google Colab environment. The notebook focuses on predicting vehicle advertisement prices using structured data preprocessing, exploratory analysis, feature engineering, and model evaluation techniques.
+
+[Advanced-Machine-LearningAdvanced-Machine-Learning
+](https://github.com/Sumaidzahid/Advanced-Machine-Learning)
+
+A comprehensive machine learning project focused on predicting used car prices using advanced regression techniques, feature engineering, model interpretation, and unsupervised learning methods. The project demonstrates a full data science pipeline from raw data processing to model explainability and dimensionality reduction.
