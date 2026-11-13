@@ -28,9 +28,9 @@ The three boosters are statistically indistinguishable.
 On FD003, Ridge achieved a NASA score of 1,154 versus CatBoost at 1,151; the bootstrap share indicates only a marginal advantage for CatBoost, and the difference is not statistically significant.
 
 ## Method
-- Training target capped (110 cycles FD001, 115 FD003); scored against uncapped true RUL.
+- Training target capped 110 cycles (FD001) and 115 cycles (FD003); scored against uncapped true RUL.
 - GroupKFold by engine; scaler and SelectKBest inside the pipeline.
-- Hyperparameters: GridSearchCV; cap: value chosen a priori and checked on test, tuned Manually.
+- Hyperparameters: GridSearchCV; cap: value chosen a priori and validated on test set, with manual tuning.
 
 ## What drives predictions (FD001)
 s11, s9, s4, s12, s14 (permutation importance and SHAP agree).
